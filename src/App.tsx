@@ -1,9 +1,7 @@
 import {Routes, Route, Navigate} from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
+import LoginPage from "./pages/LoginPage";
 
-function Login() {
-  return <h1>Login</h1>
-}
 function Register() {
   return <h1>Register</h1>
 }
@@ -21,7 +19,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/games" replace />} />
-      <Route path= "/login" element={<Login />} />
+      <Route path= "/login" element={<LoginPage />} />
       <Route path= "/register" element={<Register />} />
       <Route element={<ProtectedRoute />}>
         <Route path="/games" element={<Games />} />
